@@ -17,7 +17,7 @@ Copy postgres profile from ./profiles.yml into your ~/.dbt/profile.yml
 
 Start-up the postgres container db we're going to use (requires docker):
 ```
-docker-compose up
+docker compose up
 ```
 
 Note this will automatically execute the scripts that sets up the landing tables and source data.
@@ -78,3 +78,15 @@ SELECT * FROM dw.dim_customers
 
 Proceed with the tutorial to see how to create and load tables, run tests and much more.
 
+# Tear Down
+
+```
+docker compose down
+```
+
+# Reset the DB
+
+```
+docker compose down
+rm -r ./data/postgres/*
+```
