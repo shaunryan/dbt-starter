@@ -21,6 +21,7 @@ docker-compose up
 ```
 
 Note this will automatically execute the scripts that sets up the landing tables and source data.
+The data is loaded from the tutorial csv's here `./data`
 ```
 ./data/db-init-scripts
 ```
@@ -53,12 +54,27 @@ Completed successfully
 Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
 ```
 
-# Data
-
-The example data files are here:
+After successfully running DBT you should be connect to postgres:
 
 ```
-./data
+username: jaffle_shop
+password: jaffle_shop
+database: jaffle_shop
+server: localhost
+port: 5432
 ```
 
-There's a todo to load them into the base postgres tables. Hopefully get to that in day or two.
+DBT will have created 2 staging views used to comprise `dim_customers` in the schema `dw`:
+```
+dw.stg_customers
+dw.stg_orders
+dw.dim_customers
+```
+
+Run the the following to view `dim_customer`
+```
+SELECT * FROM dw.dim_customers
+```
+
+Proceed with the tutorial to see how to create and load tables, run tests and much more.
+
