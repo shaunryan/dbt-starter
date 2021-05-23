@@ -1,3 +1,8 @@
+Gives you a quick local starting point for this free on demand tutorial.
+https://courses.getdbt.com/collections
+
+Documentation for DBT https://docs.getdbt.com/
+
 # Install DBT
 
 ```
@@ -47,3 +52,13 @@ Completed successfully
 
 Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
 ```
+
+# Data
+
+The example data files are here:
+
+```
+./data
+```
+
+There's a todo to load them into the base postgres tables. Hopefully get to that in day or two.

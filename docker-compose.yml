@@ -14,4 +14,5 @@ services:
     volumes: 
       - ./data/postgres:/var/lib/postgresql/data
       - ./data/db-init-scripts:/docker-entrypoint-initdb.d
+      - ./data:/jaffle_shop_data
 
